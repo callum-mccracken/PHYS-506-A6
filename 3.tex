@@ -1,0 +1,51 @@
+\section{B lifetime.}
+
+Given the lifetimes of the neutral $B$-mesons are $\tau=\SI{1.53}{ps}$, calculate the mean distance they travel when produced at the KEKB collider in collisions of $\SI{8}{GeV}$ electrons and $\SI{3.5}{GeV}$ positrons.
+
+\begin{align*}
+    \hline
+\end{align*}
+
+This collision will look something like this:
+
+$$e^+ e^- \to X \to B\bar{B}$$
+
+In the rest frame of the $X$,
+\begin{align*}
+    p_{e^-} &= (E_{e^-}, 0, 0, p_{z,e^-}) \\
+    p_{e^+} &= (E_{e^+}, 0, 0, p_{z,e^+}) \\
+    p_{X} &= (E_{X}, 0, 0, 0) \\
+\end{align*}
+
+\begin{align*}
+    \implies m_X &= \SI{8}{GeV} + \SI{3.5}{GeV} = \SI{11.5}{GeV}
+\end{align*}
+
+Then we can use the $a \to 1 + 2$ formula to get the momentum of the $B$ in the $X$'s rest frame:
+\begin{align*}
+    p &= \frac{1}{2m_X} \sqrt{\left[m_X^2 - (m_B + m_B)^2\right]\left[m_X^2 - (m_B - m_B)^2\right]} \\
+    &= \frac{1}{2m_X} \sqrt{\left[m_X^2 - 4m_B^2\right]\left[m_A^2\right]} \\
+    &= \frac{1}{2} \sqrt{\left[m_X^2 - 4m_B^2\right]} \\
+    &\approx \SI{2.23}{GeV} \\
+\end{align*}
+(using 5.3 GeV for $m_B$.)
+
+Deduct marks here for not understanding why this doesn't depend on the angle that the $B$s come out, but apparently it is possible to show that that's the case (is what friends say).
+
+\todo[inline]{hopefully get some clarity tomorrow?}
+
+If we take that for granted, then we can just use good ol fashioned time dilation, using $d$ as the distance it travels in the lab frame.
+
+\begin{align*}
+    \tau \gamma &= t \\
+    \tau \gamma &= \frac{d}{v} \\
+    d &= v \tau \gamma \\
+\end{align*}
+
+We know this is in the high-energy regime, so $v \approx c$ and (as shown on a previous assignment) $\gamma \approx \frac{p}{m}$
+
+\begin{align*}
+    d &= c \tau \frac{p}{m}\\
+    &= \SI{299792458}{m / s}(\SI{1.53}{ps})\frac{\SI{2.23}{GeV}}{\SI{5.3}{GeV}} \\
+    &= \SI{0.193}{mm}
+\end{align*}

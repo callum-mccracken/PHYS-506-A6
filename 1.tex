@@ -1,0 +1,91 @@
+\section{Kaon Mixing}
+
+The $K_S - K_L$ mass difference can be expressed as
+
+$$\Delta m = m(K_L) - m(K_S) \approx \sum_{q, q'} \frac{G_F^2}{3\pi^2} f_K^2 m_K |V_{qd} V_{qs}^* V_{q'd} V_{q's}^*| m_q m_{q'}, $$
+
+where $q$ and $q'$ are the quark flavours appearing in the box diagram. Using the values for the CKM matrix elemnts given in (14.8), obtain expressions for the relative contributions to $\Delta m$ arising from the different combinations of quarks in the box diagrams.
+
+\begin{align*}
+    \hline
+\end{align*}
+
+Equation 14.8:
+\begin{align*}
+    \begin{pmatrix}
+        |V_{ud}| & |V_{us}| & |V_{ub}| \\
+        |V_{cd}| & |V_{cs}| & |V_{cb}| \\
+        |V_{td}| & |V_{ts}| & |V_{tb}| \\
+    \end{pmatrix} &= \begin{pmatrix}
+        0.974 & 0.225 & 0.004 \\
+        0.225 & 0.973 & 0.041 \\
+        0.009 & 0.040 & 0.999 \\
+    \end{pmatrix}
+\end{align*}
+
+Since $W$ interactions must interact $u,c,t \to d,s,b$, the only $(q, q')$ combinations with non-zero contributions will be $(u/c/t, u/c/t)$.
+
+The term in the sum:
+\begin{align*}
+    \frac{G_F^2}{3\pi^2} f_K^2 m_K |V_{qd} V_{qs}^* V_{q'd} V_{q's}^*| m_q m_{q'}.
+\end{align*}
+
+Since we're only worried about relative contributions, we can get rid of the constant factors.
+\begin{align*}
+    |V_{qd} V_{qs}^* V_{q'd} V_{q's}^*| m_q m_{q'}
+\end{align*}
+
+\begin{align*}
+    (u, u) &: |V_{ud} V_{us}^* V_{ud} V_{us}^*| m_u m_{u}\\
+    &= |V_{ud}|^2 |V_{us}|^2 m_u^2\\
+    &= |0.974|^2 |0.225|^2 (\SI{2}{MeV})^2\\
+    &= \SI{0.192}{MeV^2} \\
+\end{align*}
+
+\begin{align*}
+    (u, c) &: |V_{ud} V_{us}^* V_{cd} V_{cs}^*| m_u m_{c} \\
+    &= |V_{ud}| |V_{us}| |V_{cd}| |V_{cs}| m_u m_{c} \\
+    &= |0.974| |0.225| |0.225| |0.973| (\SI{2}{MeV}) (\SI{1270}{MeV}) \\
+    &= \SI{122}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (u, t) &: |V_{ud} V_{us}^* V_{td} V_{ts}^*| m_u m_{t} \\
+    &= |V_{ud}| |V_{us}| |V_{td}| |V_{ts}| m_u m_{t} \\
+    &= |0.974| |0.225| |0.009| |0.040| (\SI{2}{MeV}) (\SI{172000}{MeV}) \\
+    &= \SI{27.1}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, u) &= (u, c) = \SI{122}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, c) &: |V_{cd}|^2 |V_{cs}|^2 m_c^2 \\
+    &=|0.225|^2 |0.973|^2 (\SI{1270}{MeV})^2 \\
+    &= \SI{77300}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, t) &: |V_{cd} V_{cs}^* V_{td} V_{ts}^*| m_c m_{t} \\
+    &= |V_{cd}| |V_{cs}| |V_{td}| |V_{ts}| m_c m_{t} \\
+    &= |0.225| |0.973| |0.009| |0.040| (\SI{1270}{MeV}) (\SI{172000}{MeV}) \\
+    &= \SI{17200}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (t, u) &= (u, t) = \SI{27.1}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (t, c) &= (c, t) = \SI{17200}{MeV^2} \\
+\end{align*}
+
+\begin{align*}
+    (t, t) &: |V_{td} V_{ts}^* V_{td} V_{ts}^*| m_t m_{t} \\
+    &= |V_{td}|^2 |V_{ts}|^2 m_t^2 \\
+    &= |0.009|^2 |0.040|^2 (\SI{172000}{MeV})^2 \\
+    &= \SI{3830}{MeV^2} \\
+\end{align*}
+
+The relative contributions:
+\begin{align*}
+    \begin{matrix}
+        (u,u) & (u,c)=(c,u) & (u,t) & (c,c) & (c,t)=(t,c) & (t,t) \\
+        0.192 & 122 & 27.1 & 77300 & 17200 & 3830 \\
+    \end{matrix}
+\end{align*}

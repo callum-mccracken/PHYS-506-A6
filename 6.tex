@@ -1,0 +1,37 @@
+\section{Asymmetry in weak decays}
+
+From the measurement of the muon asymmetry parameter, $\mathcal{A}_\mu = 0.1456\pm 0.0091$, determine the corresponding value of $\sin^2(\theta_W)$.
+
+We have an expression for $\mathcal{A}$ in terms of $\frac{c_V}{c_A}$, and another for $\frac{c_V}{c_A}$ in terms of $\sin^2(\theta_W)$:
+\begin{align*}
+    \mathcal{A}_\mu &= \frac{2\frac{c_V}{c_A}}{1 + \left(\frac{c_V}{c_A}\right)^2} \\
+    \frac{c_V}{c_A} &= 1 - 4\sin^2(\theta_W) \\
+\end{align*}
+
+Call the fraction $\frac{c_V}{c_A} = C$.
+\begin{align*}
+    \mathcal{A}_\mu &= \frac{2C}{1 + C^2} \\
+    \mathcal{A}_\mu C^2 - 2C + \mathcal{A}_\mu &= 0 \\
+    \mathcal{A}_\mu C^2 - 2C + \mathcal{A}_\mu &= 0 \\
+\end{align*}
+
+\begin{align*}
+    C &= \frac{2 \pm \sqrt{4 - 4\mathcal{A}_\mu^2}}{2\mathcal{A}_\mu} \\
+    &= \frac{1 \pm \sqrt{1 - \mathcal{A}_\mu^2}}{\mathcal{A}_\mu} \\
+    1 - 4\sin^2(\theta_W) &= \frac{1 \pm \sqrt{1 - \mathcal{A}_\mu^2}}{\mathcal{A}_\mu} \\
+    \sin^2(\theta_W) &= \frac{1}{4} - \frac{1 \pm \sqrt{1 - \mathcal{A}_\mu^2}}{4\mathcal{A}_\mu} \\
+\end{align*}
+
+Plugging in $\mathcal{A}_\mu = 0.1456$, we get $\sin^2(\theta_W) = 0.2317$ (using the minus in $\pm$ otherwise we get a nonsense answer).
+
+Then to get the error (assuming we can just use the good ol error propagation formula):
+\begin{align*}
+    y &= f(x) \\
+    \implies \sigma_y^2 &= \left(\frac{d f}{d x}\right)^2 \sigma_x^2 \\
+    \implies \sigma_{\sin^2(\theta_w)}^2 &= \left(\frac{d \sin^2(\theta_w)}{d \mathcal{A}_\mu}\right)^2 \sigma_{\mathcal{A}_\mu}^2 \\
+    &= \left(\frac{d}{d \mathcal{A}_\mu} \frac{1}{4} - \frac{1 - \sqrt{1 - \mathcal{A}_\mu^2}}{4\mathcal{A}_\mu}\right)^2 \sigma_{\mathcal{A}_\mu}^2 \\
+    &= \left(\frac{\sqrt{1 - \mathcal{A}_\mu^2} - 1}{4\mathcal{A}_\mu^2\sqrt{1 - \mathcal{A}_\mu^2}}\right)^2 \sigma_{\mathcal{A}_\mu}^2 \\
+    &\approx 0.0012 \\
+\end{align*}
+
+So we have $\sin^2(\theta_W) = 0.2317 \pm 0.0012$.

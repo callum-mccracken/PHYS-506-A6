@@ -1,0 +1,81 @@
+\section{B mixing.}
+
+Show that the $B^0 - \bar{B}^0$ mass difference is dominated by the exchange of two top quarks in the box diagram.
+\begin{align*}
+    \hline
+\end{align*}
+
+Essentially repeat the previous problem for kaons, but now using $B$ and its box diagram / quarks $(d,b)$:
+\begin{align*}
+    \Delta m = m(B_H) - m(B_L) \approx \sum_{q, q'} \frac{G_F^2}{3\pi^2} f_B^2 m_B |V_{qd} V_{qb}^* V_{q'd} V_{q'b}^*| m_q m_{q'}
+\end{align*}
+
+Equation 14.8:
+\begin{align*}
+    \begin{pmatrix}
+        |V_{ud}| & |V_{us}| & |V_{ub}| \\
+        |V_{cd}| & |V_{cs}| & |V_{cb}| \\
+        |V_{td}| & |V_{ts}| & |V_{tb}| \\
+    \end{pmatrix} &= \begin{pmatrix}
+        0.974 & 0.225 & 0.004 \\
+        0.225 & 0.973 & 0.041 \\
+        0.009 & 0.040 & 0.999 \\
+    \end{pmatrix}
+\end{align*}
+
+\begin{align*}
+    (u, u) &: |V_{ud} V_{ub}^* V_{ud} V_{ub}^*| m_u m_{u}\\
+    &= |V_{ud}|^2 |V_{ub}|^2 m_u^2\\
+    &= |0.974|^2 |0.004|^2 (\SI{2}{MeV})^2\\
+    &= \SI{6.07e-5}{MeV^2} \\
+\end{align*}
+
+\begin{align*}
+    (u, c) &: |V_{ud} V_{ub}^* V_{cd} V_{cb}^*| m_u m_{c} \\
+    &= |V_{ud}| |V_{ub}| |V_{cd}| |V_{cb}| m_u m_{c} \\
+    &= |0.974| |0.004| |0.225| |0.041| (\SI{2}{MeV}) (\SI{1270}{MeV}) \\
+    &= \SI{0.0913}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (u, t) &: |V_{ud} V_{ub}^* V_{td} V_{tb}^*| m_u m_{t} \\
+    &= |V_{ud}| |V_{ub}| |V_{td}| |V_{tb}| m_u m_{t} \\
+    &= |0.974| |0.004| |0.009| |0.999| (\SI{2}{MeV}) (\SI{172000}{MeV}) \\
+    &= \SI{12.0}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, u) &= (u, c) = \SI{0.0913}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, c) &: |V_{cd}|^2 |V_{cs}|^2 m_c^2 \\
+    &=|0.225|^2 |0.041|^2 (\SI{1270}{MeV})^2 \\
+    &= \SI{137}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (c, t) &: |V_{cd} V_{cb}^* V_{td} V_{tb}^*| m_c m_{t} \\
+    &= |V_{cd}| |V_{cb}| |V_{td}| |V_{tb}| m_c m_{t} \\
+    &= |0.225| |0.041| |0.009| |0.999| (\SI{1270}{MeV}) (\SI{172000}{MeV}) \\
+    &= \SI{18100}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (t, u) &= (u, t) = \SI{12.0}{MeV^2} \\
+\end{align*}
+\begin{align*}
+    (t, c) &= (c, t) = \SI{18100}{MeV^2} \\
+\end{align*}
+
+\begin{align*}
+    (t, t) &: |V_{td} V_{tb}^* V_{td} V_{tb}^*| m_t m_{t} \\
+    &= |V_{td}|^2 |V_{tb}|^2 m_t^2 \\
+    &= |0.009|^2 |0.999|^2 (\SI{172000}{MeV})^2 \\
+    &= \SI{2390000}{MeV^2} \\
+\end{align*}
+
+The relative contributions:
+\begin{align*}
+    \begin{matrix}
+        (u,u) & (u,c)=(c,u) & (u,t) & (c,c) & (c,t)=(t,c) & (t,t) \\
+        \SI{6.07e-5}{} & 0.0913 & 12.0 & 137 & 18100 & 2390000 \\
+    \end{matrix}
+\end{align*}
+
+The two-top term is by far the largest, i.e. it dominates.

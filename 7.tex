@@ -1,0 +1,69 @@
+\section{Higgs Mechanism and Lagrangians.}
+
+Show that the Lagrangian for a complex scalar field $\phi$, $\mathcal{L} = (D_\mu \phi)^* (D^\mu \phi)$, with the covariant derivative $D_\mu = \d_\mu + igB_\mu$, is invariant under local $U(1)$ gauge transformations, $\phi(x) \to \phi'(x) = e^{ig\chi(x)}\phi(x)$, provided the gauge field transforms as $B_\mu \to B_\mu' = B_\mu - \d_\mu \chi(x)$.
+
+Start with the Lagrangian and expand a little:
+\begin{align*}
+    \mathcal{L} &= (D_\mu \phi)^* (D^\mu \phi) \\
+    &= ([\d_\mu + igB_\mu] \phi)^* ([\d^\mu + igB^\mu] \phi) \\
+    &= (\d_\mu\phi + igB_\mu\phi)^* (\d^\mu\phi + igB^\mu\phi) \\
+    &= (\d_\mu\phi^* - igB_\mu\phi^*) (\d^\mu\phi + igB^\mu\phi) \\
+    &= (\d_\mu\phi^*)(\d^\mu\phi) - (igB_\mu\phi^*) (\d^\mu\phi) + (\d_\mu\phi^*)(igB^\mu\phi) - (igB_\mu\phi^*) (igB^\mu\phi) \\
+    &= (\d_\mu\phi^*)(\d^\mu\phi) - ig (B_\mu\phi^*) (\d^\mu\phi) + ig(\d_\mu\phi^*)(B^\mu\phi) + g^2(B_\mu\phi^*) (B^\mu\phi) \\
+\end{align*}
+
+Now apply these transformations:
+\begin{align*}
+    \phi'(x) &= e^{ig\chi(x)}\phi(x)\\
+    B_\mu' &= B_\mu - \d_\mu \chi(x)\\
+\end{align*}
+
+The transformed Lagrangian:
+\begin{align*}
+    \mathcal{L}' &= (\d_\mu\phi'^*)(\d^\mu\phi') - ig (B_\mu'\phi'^*) (\d^\mu\phi') + ig(\d_\mu\phi'^*)(B'^\mu\phi') + g^2(B'_\mu\phi'^*) (B'^\mu \phi') \\
+\end{align*}
+
+\newpage
+Bits of this:
+\begin{align*}
+    (\d_\mu\phi'^*)(\d^\mu\phi') &= (\d_\mu(e^{ig\chi(x)}\phi(x))^*)(\d^\mu e^{ig\chi(x)}\phi(x))\\
+    &= (\d_\mu(e^{-ig\chi(x)}\phi^*(x)))(\d^\mu e^{ig\chi(x)}\phi(x)) \\
+    &= (\d_\mu(e^{-ig\chi(x)})\phi^*(x) + e^{-ig\chi(x)}\d_\mu(\phi^*(x)))(\d^\mu (e^{ig\chi(x)})\phi(x) + e^{ig\chi(x)}\d^\mu (\phi(x))) \\
+    &= (-ig(\d_\mu\chi)e^{-ig\chi}\phi^* + e^{-ig\chi}(\d_\mu \phi^*))(ig(\d^\mu \chi) e^{ig\chi}\phi + e^{ig\chi} (\d^\mu \phi)) \\
+    &= (-ig(\d_\mu\chi)\phi^* + (\d_\mu \phi^*))(ig(\d^\mu \chi) \phi + (\d^\mu \phi)) \\
+    &= g^2(\d_\mu\chi)(\d^\mu \chi) \phi^* \phi + ig(\d^\mu \chi)(\d_\mu \phi^*) \phi -ig(\d_\mu\chi)\phi^*(\d^\mu \phi) +(\d_\mu \phi^*)(\d^\mu \phi) \\
+\end{align*}
+
+\begin{align*}
+    - ig (B_\mu'\phi'^*) (\d^\mu\phi') &= - ig ((B_\mu - \d_\mu \chi(x))(e^{ig\chi(x)}\phi(x))^*) (\d^\mu(e^{ig\chi(x)}\phi(x))) \\
+    &= - ig ((B_\mu - (\d_\mu \chi))(e^{-ig\chi}\phi^*)) (ig(\d^\mu \chi)e^{ig\chi}\phi + e^{ig\chi}(\d^\mu\phi)) \\
+    &=  (- ig B_\mu \phi^* + ig(\d_\mu \chi)\phi^*) (ig(\d^\mu \chi)\phi + (\d^\mu\phi)) \\
+    &= g^2 B_\mu (\d^\mu \chi)\phi^*\phi - g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi - ig B_\mu \phi^*(\d^\mu\phi) + ig(\d_\mu \chi)\phi^*(\d^\mu\phi) \\
+\end{align*}
+
+\begin{align*}
+    ig(\d_\mu\phi'^*)(B'^\mu\phi') &= ig(\d_\mu(e^{ig\chi(x)}\phi(x))^*)((B^\mu - \d^\mu \chi(x))(e^{ig\chi(x)}\phi(x))) \\
+    &= ig(\d_\mu(e^{-ig\chi(x)}\phi^*(x)))e^{ig\chi}(B^\mu \phi - (\d^\mu \chi)\phi) \\
+    &= ig(-ig(\d_\mu \chi)e^{-ig\chi}\phi^* + e^{-ig\chi}(\d_\mu \phi^*))e^{ig\chi}(B^\mu \phi - (\d^\mu \chi)\phi) \\
+    &= (g^2(\d_\mu \chi)\phi^* + ig(\d_\mu \phi^*))(B^\mu \phi - (\d^\mu \chi)\phi) \\
+    &= g^2B^\mu(\d_\mu \chi)\phi^*\phi - g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi + igB^\mu(\d_\mu \phi^*)\phi - ig(\d^\mu \chi)(\d_\mu \phi^*)\phi \\
+\end{align*}
+
+\begin{align*}
+    g^2(B'_\mu\phi'^*) (B'^\mu \phi') &= g^2((B_\mu - (\d_\mu \chi))e^{-ig\chi}\phi^*) ((B^\mu - (\d^\mu \chi)) e^{ig\chi}\phi) \\
+    &= g^2((B_\mu - (\d_\mu \chi))\phi^*) ((B^\mu - (\d^\mu \chi))phi) \\
+    &= (g^2B_\mu\phi^* - g^2(\d_\mu \chi)\phi^*) (B^\mu \phi - (\d^\mu \chi)\phi) \\
+    &= g^2B_\mu B^\mu \phi^*\phi - g^2B_\mu(\d^\mu \chi)\phi^*\phi - g^2B^\mu(\d_\mu \chi)\phi^*\phi + g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi \\
+\end{align*}
+
+\newpage
+Adding those back up, we have a beautiful cancellation of most terms, leaving us with the expanded version of the old Lagrangian:
+\begin{align*}
+    \mathcal{L}' &= g^2(\d_\mu\chi)(\d^\mu \chi) \phi^* \phi + ig(\d^\mu \chi)(\d_\mu \phi^*) \phi -ig(\d_\mu\chi)\phi^*(\d^\mu \phi) +(\d_\mu \phi^*)(\d^\mu \phi) \\
+    &+ g^2 B_\mu (\d^\mu \chi)\phi^*\phi - g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi - ig B_\mu \phi^*(\d^\mu\phi) + ig(\d_\mu \chi)\phi^*(\d^\mu\phi) \\
+    &+ g^2B^\mu(\d_\mu \chi)\phi^*\phi - g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi + igB^\mu(\d_\mu \phi^*)\phi - ig(\d^\mu \chi)(\d_\mu \phi^*)\phi \\
+    &+ g^2B_\mu B^\mu \phi^*\phi - g^2B_\mu(\d^\mu \chi)\phi^*\phi - g^2B^\mu(\d_\mu \chi)\phi^*\phi + g^2(\d_\mu \chi)(\d^\mu \chi)\phi^*\phi \\
+    &= (\d_\mu\phi^*)(\d^\mu\phi) - igB_\mu\phi^*(\d^\mu\phi) + igB^\mu(\d_\mu\phi^*)\phi + g^2B_\mu B^\mu\phi^*\phi \\
+    &= (\d_\mu\phi^*)(\d^\mu\phi) - ig (B_\mu\phi^*) (\d^\mu\phi) + ig(\d_\mu\phi^*)(B^\mu\phi) + g^2(B_\mu\phi^*) (B^\mu\phi) \\
+    &= \mathcal{L} \\
+\end{align*}

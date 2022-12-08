@@ -1,0 +1,43 @@
+\section{Higgs production.}
+
+Assuming a total Higgs production cross section of $\SI{20}{pb}$ and an integrated luminosity of $\SI{10}{fb^{-1}}$, how many $H \to \gamma \gamma$ and $H \to \mu^+ \mu^- \mu^+ \mu^-$ events are expected in each of the ATLAS and CMS experiments?
+
+\begin{align*}
+    \hline
+\end{align*}
+
+Well first, how many $H$ are expected?
+
+\begin{align*}
+    N &= \sigma \int \mathcal{L}(t)dt \\
+    &= \SI{20}{pb}\SI{10}{fb^{-1}}
+    &= \SI{20000}{fb}\SI{10}{fb^{-1}}
+    &= 200000
+\end{align*}
+
+Then to find the number of events of a particular type we need branching ratios.
+
+Using Thomson table 17.1, we have $BR(H \to \gamma\gamma) = 0.2\%$.
+
+\begin{align*}
+    \implies N_{H \to \gamma\gamma} &= N \times BR(H \to \gamma\gamma) \\
+    &= 200000 \times 0.2\% \\
+    &= 400 \\
+\end{align*}
+
+Then $H \to \mu^+ \mu^- \mu^+ \mu^-$ will come from $BR(H \to Z Z^*) = 2.7\%$ and $BR(Z \to \mu^+\mu^-) = 3.4\%$ (found this on wikipedia, must be somewhere in the book too though).
+
+\begin{align*}
+    BR(H \to \mu^+ \mu^- \mu^+ \mu^-) &= BR(H \to Z Z^*) BR(Z \to \mu^+\mu^-)^2 \\
+    &= \SI{3.1212e-5}{}
+\end{align*}
+(square since both $Z$s must decay to $\mu^+ \mu^-$)
+
+\begin{align*}
+    \implies N_{H \to \mu^+ \mu^- \mu^+ \mu^-} &= N \times BR(H \to \mu^+ \mu^- \mu^+ \mu^-) \\
+    &= 200000 \times \SI{3.1212e-5}{} \\
+    &= 6.2424 \\
+    &\approx 6 \\
+\end{align*}
+
+Assuming both of the experiments get the full luminosity, that's 800 and 12.
